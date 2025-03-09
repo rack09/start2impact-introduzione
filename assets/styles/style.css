@@ -1,0 +1,223 @@
+/* general styles */
+
+html, body {
+    height: 100%;
+}
+
+/* Modifying my box model */
+
+html{
+    box-sizing:  border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/* Resetting margins and paddings */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* applicando formati ai div con classe contenitore, con margine 
+pari a 0 in alto e in basso e "auto" per i lati in modo che il 
+contenuto sia centrato.*/
+
+.container{ 
+    width: 90%;
+    max-width: 1366px;
+    margin: 0 auto;
+}
+
+/* styles of "conteiner" */
+/* header */
+
+header{
+    background-color: green;
+    /*overflow: hidden;*/
+}
+#logo{
+    float: left;
+    
+}
+#infoContatto{
+    float: right;
+    margin-top: 22px;
+}
+#infoContatto i{
+    color: #fff;
+    margin-right: 12px;
+    font-size: 1.20rem;
+}
+
+/*section 1 */
+article > section:nth-child(1){
+    background-image: linear-gradient(to left top, rgba(55,185,30,0.83),rgba(25,59,240,0.83)), url(../images/header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right;
+
+}
+
+#intro {
+    display: flex; /* Se mi cancelli, mi unisco all header :) Hakunamatata*/
+    padding: 50px 0px; /* margin top/bottom right/left */
+    flex-flow: row wrap; /*La proprietà 'wrap' ci permette di indicare che gli elementi 'flessibili' vengano separati in blocchi, uno sotto l'altro, contenuti quando la loro dimensione supera quella del loro elemento contenitore.*/
+    height: 100%;
+    min-height: 600px;
+}
+#descrizione {
+    flex-basis: 60%;
+    /*padding: 0 1em;*/
+    padding: 0 1em 0 0;
+    flex-grow: 2;
+    color: #fff;
+}
+#descrizione i {
+    font-size: 0.90rem;
+    border: 1px solid;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: #fff;
+    color: #008000;
+}
+#form {
+    flex-basis: 30%;
+    /*background-color: #fff;*/
+    background-color: rgb(0,0,0,0.8 );
+    color: #fff;
+    padding: 20px 1em;
+}
+#form h2 {
+    font-size: 1.40rem;
+    margin-bottom: 40px;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+    font-size: 0.90rem;
+}
+
+input[type="text"],input[type="email"] {
+    display: inline-block;
+    width: 100%;
+    height: 45px;
+    padding: 0 1em;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+}
+input[type="submit"] {
+    display: inline-block;
+    border: none;
+    background-color: #008000;
+    color: #fff;
+    width: 100%;
+    padding: 10px 1em;
+    margin: 25px auto; /*centralizato nell suo contenitore*/
+    font-size: 1rem;
+}
+
+h1 {
+    /*font-size: 2.68rem;*/
+    font-size: 2.80rem;
+    font-family: arial, tahoma, verdana, sans-serif;
+    margin-bottom: 25px;
+}
+#descrizione p {
+    margin-bottom: 33px;
+    line-height: 1.65;
+}
+
+/* section 2 */
+
+article > section:nth-child(2) {
+    padding: 60px 0; /*spazio interno*/
+
+}
+#sectionDue {
+    display: flex; /*Serve per mostrare gli elementi allineati*/
+    flex-flow: row wrap;
+    justify-content: space-between;
+    text-align: center;
+}
+
+#sectionDue i {
+    color: #13a3db;
+    font-size: 2.5rem;
+    border: 1px solid;
+    border-radius: 50%;
+    padding: 48px 0;
+    width: 140px;
+    height: 140px;
+    margin-bottom: 35px;
+}
+#sectionDue col {
+    font-size: 1.10rem;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+/* section 3 */
+
+article>section:nth-child(3){
+    background-color: #f6f9fd;
+    padding: 40px 0;
+}
+
+#sectionTre div {
+    flex-basis: 60%;
+    padding-right: 1.9em;
+}
+video {
+    flex-basis: 40%;
+    width: 40%;
+    align-self: flex-start;
+}
+#sectionTre{
+    display: flex; /*Gli elementi sono mostrati uno accanto all'altro, serve per visualizzarli in colonne.*/
+    flex-flow: row wrap;
+    
+
+}
+
+h2{
+    margin-bottom: 20px;
+}
+
+
+
+/* footer */
+
+footer {
+    background-color: #2c2a2a;
+    padding: 20px 0;
+}
+
+.copyright {
+    float: right;
+    color: #c0bcbc;
+    padding-top: 8px;
+}
+.nav {
+    float: left;
+}
+#pieDiPagina {
+    overflow: hidden; /*Questo si fa perché gli elementi sopra copy e nav traboccano*/
+}
+
+.nav li {
+    display: inline-block; /*Questo serve per farli apparire in linea e non uno sopra l'altro*/
+    font-size: 0.8rem;
+    padding: 12px 0 0;
+}
+
+.nav li a{
+    color: #c0bcbc;
+    text-decoration: none;
+    padding-right: 1.5em;
+}
